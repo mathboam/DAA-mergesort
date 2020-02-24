@@ -1,10 +1,7 @@
-/* C program for Merge Sort */
+
 #include<stdlib.h> 
 #include<stdio.h> 
-  
-// Merges two subarrays of arr[]. 
-// First subarray is arr[l..m] 
-// Second subarray is arr[m+1..r] 
+   
 void merge(int arr[], int l, int m, int r) 
 { 
     int i, j, k; 
@@ -76,8 +73,6 @@ void mergeSort(int arr[], int l, int r)
     } 
 } 
   
-/* UTILITY FUNCTIONS */
-/* Function to print an array */
 void printArray(int A[], int size) 
 { 
     int i; 
@@ -86,10 +81,19 @@ void printArray(int A[], int size)
     printf("\n"); 
 } 
   
-/* Driver program to test above functions */
+
 int main() 
 { 
-    int arr[] = {12, 11, 13, 5, 6, 7}; 
+    int size;
+    printf("Enter the size of the array\n");
+    scanf("%i", &size);
+    int arr[size];
+    for (int i = 0; i < size; i++)
+    {
+        printf("Enter elements of array\n");
+        scanf("%i", &arr[i]);
+    }   
+    
     int arr_size = sizeof(arr)/sizeof(arr[0]); 
   
     printf("Given array is \n"); 
